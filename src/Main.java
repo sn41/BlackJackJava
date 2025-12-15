@@ -1,11 +1,57 @@
 public class Main {
     public static void main(String[] args){
-        System.out.println("1234567");
-        System.out.print("1234567");
-        clearScreen();
-        System.out.print("aaaaaaa");
+//        System.out.println("1234567");
+//        System.out.print("1234567");
+//        clearScreen();
+//        System.out.print("aaaaaaa");
 
 //        Card.draw();
+//        Card.draw("♠","10");
+//        Card.draw("♦"," 8");
+        
+        Deck deck = new Deck();
+        Card[] cards = {
+                new Card("♠", " 6"),
+                new Card("♠", " 7"),
+                new Card("♠", " 8"),
+                new Card("♠", " 9"),
+                new Card("♠", "10"),
+                new Card("♠", " В"),
+                new Card("♠", " Д"),
+                new Card("♠", " К"),
+                new Card("♠", " Т"),
+                new Card("♣", " 6"),
+                new Card("♣", " 7"),
+                new Card("♣", " 8"),
+                new Card("♣", " 9"),
+                new Card("♣", "10"),
+                new Card("♣", " В"),
+                new Card("♣", " Д"),
+                new Card("♣", " К"),
+                new Card("♣", " Т"),
+                new Card("♦", " 6"),
+                new Card("♦", " 7"),
+                new Card("♦", " 8"),
+                new Card("♦", " 9"),
+                new Card("♦", "10"),
+                new Card("♦", " В"),
+                new Card("♦", " Д"),
+                new Card("♦", " К"),
+                new Card("♦", " Т"),
+                new Card("♥", " 6"),
+                new Card("♥", " 7"),
+                new Card("♥", " 8"),
+                new Card("♥", " 9"),
+                new Card("♥", "10"),
+                new Card("♥", " В"),
+                new Card("♥", " Д"),
+                new Card("♥", " К"),
+                new Card("♥", " Т"),
+        };
+
+        int id = deck.get();
+        Card card = cards[id];
+        card.draw();
     }
 
 
