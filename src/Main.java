@@ -1,9 +1,12 @@
 public class Main {
     public static void main(String[] args){
-        Deck deck = new Deck();
+        /*Deck deck = new Deck();
         Card card = deck.getCard();
         int points = card.points;
-        card.draw();
+        card.draw();*/
+
+        //todo Реализовать алгоритм представленный в файле "Блок_схема.md"
+
     }
 
 

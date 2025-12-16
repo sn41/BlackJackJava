@@ -1,16 +1,16 @@
 public class Card {
     String suit;
-    String name;
+    String value;
     int points;
 
-    Card(String suit, String name, int points){
-        this.suit = suit;
-        this.name = name;
-        this.points = points;
+    Card(String cardSuit, String cardValue, int cardPoints){
+        suit = cardSuit;
+        value = cardValue;
+        points = cardPoints;
     }
 
     public void draw() {
-        String d = name;
+        String d = value;
         String m = suit;
         System.out.println("┌────┐");
         System.out.println("│"+d+" "+m+"│");

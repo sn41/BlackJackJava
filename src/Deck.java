@@ -9,7 +9,7 @@ public class Deck {
         }
     }
 
-    int get() {
+    int getId() {
         Random r = new Random();
         while (true) {
             int id = r.nextInt(0, 36);
@@ -21,7 +21,7 @@ public class Deck {
         }
     }
 
-    Card getCard() {
+/*    Card getCard() {
         int id = get();
         Card card = cards[id];
         return card;
@@ -64,7 +64,57 @@ public class Deck {
             new Card("♥", " Д", 3),
             new Card("♥", " К", 4),
             new Card("♥", " Т", 1),
-    };
+    };*/
+
+    Card getCard() {
+        int cardId = getId();
+        int cardSuiteId = cardId / 9;
+
+        String cardSuite = switch (cardSuiteId) {
+            case 0 -> "♠";
+            case 1 -> "♣";
+            case 2 -> "♦";
+            default -> "♥";
+        };
+
+        int cardValueId = cardId % 9;
+
+        String cardValue = switch (cardValueId) {
+            case 0 -> " 6";
+            case 1 -> " 7";
+            case 2 -> " 8";
+            case 3 -> " 9";
+            case 4 -> "10";
+            case 5 -> " Т";
+            case 6 -> " В";
+            case 7 -> " Д";
+            default -> " К";
+        };
+
+
+        // todo Найти ошибки и исправить (Начало)
+
+        int cardPointsId = cardId % 9;
+
+        String cardPoints = switch (cardValueId) {
+            case 0 -> " 6";
+            case 1 -> " 7";
+            case 2 -> " 8";
+            case 3 -> " 9";
+            case 4 -> "10";
+            case 5 -> " 1";
+            case 6 -> " 2";
+            case 7 -> " 3";
+            default -> " 4";
+        };
+
+
+        Card card = new Card(cardSuite, cardValue, cardPoints);
+
+        // todo Найти ошибки и исправить (Конец)
+
+        return card;
+    }
 
 
 }
